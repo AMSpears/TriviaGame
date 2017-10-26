@@ -5,7 +5,10 @@
 	margin: auto;
 	border-radius: 7px;
 	background: #e8eef7;
-	display: block;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 .fit {
 	max-width: 100%;
@@ -27,6 +30,11 @@ button {
 	transition: all 0.5s;
 	cursor: pointer;
 	margin: 5px;
+}
+#startButton {
+	background-color: #7fba5e;
+	font-family: monospace;
+	font-size: 20px;
 }
 #buttonA {
 	background-color: #4b73ae;
