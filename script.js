@@ -243,7 +243,7 @@ $('document').ready(function() {
 	//shuffle found on: https://stackoverflow.com/questions/11935175/sampling-a-random-subset-from-an-array
 	function shuffle(array) {
 		for (let i = 0; i < array.length - 1; i++) {
-			let j = i + Math.floor(Math.random() * (array.length - i))
+			var j = i + Math.floor(Math.random() * (array.length - i))
 
 			var shuffledArray = array[j]
 			array[j] = array[i]
@@ -251,7 +251,7 @@ $('document').ready(function() {
 		}
 	}
 	function startTimer() {
-		var time = 10
+		var time = 40
 		$('.time').text(time)
 		// timer found on: https://stackoverflow.com/questions/3785029/jquery-countdown-timer
 		var counter = setInterval(function() {
@@ -259,6 +259,7 @@ $('document').ready(function() {
 			$('.time').text(time)
 			if (time === 0) {
 				alert('Game Over!')
+				alert('You score: ' + score + ' correct!')
 				$('.time').fadeOut('fast')
 				clearInterval(counter)
 			}
@@ -303,7 +304,7 @@ $('document').ready(function() {
 		displayQuestion(index)
 	})
 
-	function correctAnswer(element) {
+	function correctAnswer(element, score) {
 		// console.log(this.id)
 		var answerSelected
 		if (element.id === 'buttonA') {
@@ -314,33 +315,29 @@ $('document').ready(function() {
 			answerSelected = 'C.'
 		}
 
-		console.log(answerSelected)
-		console.log(questionArr[index - 1])
-
 		// console.log(answerSelected)
-		// console.log(questionArr, index)
+		// console.log(questionArr[index - 1])
+		console.log(correctAnswer, score)
 		var correctAnswer = true
 		if (answerSelected === 'A.' && questionArr[index - 1].marks[0] === true) {
-			// score++
-			// console.log(score)
-			console.log('correct!')
+			score++ // console.log(score)
+			// console.log('correct!')
 		} else if (
 			answerSelected === 'B.' &&
 			questionArr[index - 1].marks[1] === true
 		) {
-			// score++
+			score++
 			// console.log(score)
-			console.log('correct!')
+			// console.log('correct!')
 		} else if (
 			answerSelected === 'C.' &&
 			questionArr[index - 1].marks[2] === true
 		) {
-			// score++
-			// console.log(score)
-			console.log('correct!')
+			score++ // console.log(score)
+			// console.log('correct!')
 		} else {
 			correctAnswer = false
-			console.log('Incorrect!')
+			// console.log('Incorrect!')
 		}
 	}
 
