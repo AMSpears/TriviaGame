@@ -250,15 +250,20 @@ $('document').ready(function() {
 	}
 	function startTimer() {
 		var time = 40
+		$('.time').show()
 		$('.time').text(time)
 		// Timer found on: https://stackoverflow.com/questions/3785029/jquery-countdown-timer
 		var counter = setInterval(function() {
 			time--
 			$('.time').text(time)
 			if (time === 0) {
-				// alert('Game Over!')
 				alert('GAME OVER.  ' + 'You score: ' + score + ' correct!')
 				$('.time').fadeOut('fast')
+				$('.question').hide()
+				$('#buttonA').hide()
+				$('#buttonB').hide()
+				$('#buttonC').hide()
+				beginGame()
 				clearInterval(counter)
 			}
 		}, 1000)
@@ -273,13 +278,18 @@ $('document').ready(function() {
 
 	function beginGame() {
 		index = 0
-		$('.container').append('<button id="startButton">Start</button>')
-		$('#startButton').on('click', function() {
-			$(this).hide()
-			startTimer(index)
-			shuffle(questionArr)
-			displayQuestion(index)
-		})
+		if ($('#startButton').length > 0) {
+			$('#startButton').show()
+		} else {
+			$('.container').append('<button id="startButton">Start</button>')
+			$('#startButton').on('click', function() {
+				$(this).hide()
+				$('.question').show()
+				startTimer(index)
+				shuffle(questionArr)
+				displayQuestion(index)
+			})
+		}
 	}
 	function displayQuestion(questionIndex) {
 		$('.question').html(questionArr[questionIndex].question)

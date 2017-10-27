@@ -1,6 +1,6 @@
 # Trivia of the U.S. State Capitals
 
-This application allows you to test your knowledge on state capitals (specifically the U.S. state Capitals). You have **40 seconds** to answer as many questions as you can correctly. In the end, you will receive your score with the number of questions you answer correctly.
+This application allows you to test your knowledge on state capitals (specifically the U.S. state Capitals). You have **40 seconds** to answer as many questions as you can correctly. In the end, you will receive your score with the number of questions you answer correctly. Give it a try [Here](https://amspears.github.io/Trivia/)
 
 ## Technology Used
 
