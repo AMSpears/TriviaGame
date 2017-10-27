@@ -13,7 +13,7 @@
 input box.
 -If user answers correctly scores updates with the number of questions
 answered correctly and goes to the next questions.
--After two minutes game is over and user gets to see the final score.
+-After 40 seconds game is over and user gets to see the final score.
 - User is able to restart the game after two minutes.
 
 */
