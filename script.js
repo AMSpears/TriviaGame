@@ -1,7 +1,5 @@
 $('document').ready(function() {
 	$('.answerSelected').hide()
-	// $('.right').text('Right!')
-	// $('.wrong').text('Wrong!')
 	var score = 0
 	var questionArr = [
 		{
@@ -253,13 +251,13 @@ $('document').ready(function() {
 	function startTimer() {
 		var time = 40
 		$('.time').text(time)
-		// timer found on: https://stackoverflow.com/questions/3785029/jquery-countdown-timer
+		// Timer found on: https://stackoverflow.com/questions/3785029/jquery-countdown-timer
 		var counter = setInterval(function() {
 			time--
 			$('.time').text(time)
 			if (time === 0) {
-				alert('Game Over!')
-				alert('You score: ' + score + ' correct!')
+				// alert('Game Over!')
+				alert('GAME OVER.  ' + 'You score: ' + score + ' correct!')
 				$('.time').fadeOut('fast')
 				clearInterval(counter)
 			}
@@ -268,8 +266,8 @@ $('document').ready(function() {
 
 	$('.answerSelected').on('click', nextQuestion)
 	function nextQuestion() {
-		// index++
-		if (index >= questionArr.length) alert('Game Over!')
+		// // index++
+		// if (index >= questionArr.length) alert('Game Over!')
 		displayQuestion(index)
 	}
 
@@ -303,9 +301,8 @@ $('document').ready(function() {
 		nextQuestion()
 		displayQuestion(index)
 	})
-
+	// Come back to the code below and simply it into two functions.
 	function correctAnswer(element, score) {
-		// console.log(this.id)
 		var answerSelected
 		if (element.id === 'buttonA') {
 			answerSelected = 'A.'
@@ -317,7 +314,7 @@ $('document').ready(function() {
 
 		// console.log(answerSelected)
 		// console.log(questionArr[index - 1])
-		console.log(correctAnswer, score)
+		// console.log(correctAnswer, score)
 		var correctAnswer = true
 		if (answerSelected === 'A.' && questionArr[index - 1].marks[0] === true) {
 			score++ // console.log(score)
@@ -326,8 +323,7 @@ $('document').ready(function() {
 			answerSelected === 'B.' &&
 			questionArr[index - 1].marks[1] === true
 		) {
-			score++
-			// console.log(score)
+			score++ // console.log(score)
 			// console.log('correct!')
 		} else if (
 			answerSelected === 'C.' &&
