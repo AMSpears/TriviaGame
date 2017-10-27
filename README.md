@@ -18,7 +18,7 @@ Before developing the game, I researched other trivia games online to get a user
 Fork and clone the repository to render all the files.
 
 ## Future Implementations
- - Create a reset button.
+
  - Display the questions that were correct and incorrect while the user is playing.
  - Display the score on the page rather than using the alert.
  - Creating other Levels to the game.
