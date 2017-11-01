@@ -225,16 +225,82 @@ $('document').ready(function() {
 			answer: 'Salem'
 		},
 		{
+			question: 'What is the capital of Pennylvania?',
+			possibleAnswers: ['A. Harrisburg', 'B. Atlanta', 'C. Salem'],
+			marks: [true, false, false],
+			answer: 'Harrisburg'
+		},
+		{
+			question: 'What is the capital of Rhode Island',
+			possibleAnswers: ['A. Harrisburg', 'B. Atlanta', 'C. Providence'],
+			marks: [false, false, true],
+			answer: 'Providence'
+		},
+		{
+			question: 'What is the capital of South Carolina?',
+			possibleAnswers: ['A. Oklahoma City', 'B. Columbia', 'C. Harrisburg'],
+			marks: [false, true, false],
+			answer: 'Columbia'
+		},
+		{
+			question: 'What is the capital of South Dakota?',
+			possibleAnswers: ['A. Salem', 'B. Providence', 'C. Pierre'],
+			marks: [false, false, true],
+			answer: 'Pierre'
+		},
+		{
+			question: 'What is the capital of Tenessee?',
+			possibleAnswers: ['A. Nashville', 'B. Pierre', 'C. Salem'],
+			marks: [false, false, true],
+			answer: 'Nashville'
+		},
+		{
+			question: 'What is the capital of Texas?',
+			possibleAnswers: ['A. Nashville', 'B. Austin', 'C. Providence'],
+			marks: [false, true, false],
+			answer: 'Austin'
+		},
+		{
+			question: 'What is the capital of Utah?',
+			possibleAnswers: ['A. Salt Lake City', 'B. Salem', 'C. Austin'],
+			marks: [true, false, false],
+			answer: 'Salt Lake City'
+		},
+		{
+			question: 'What is the capital of Vermont?',
+			possibleAnswers: ['A. Austin', 'B. Montpelier', 'C. Austin'],
+			marks: [false, true, false],
+			answer: 'Montpelier'
+		},
+		{
 			question: 'What is the capital of Virginia?',
 			possibleAnswers: ['A. Richmond', 'B. Harrisburg', 'C. Atlanta'],
 			marks: [true, false, false],
 			answer: 'Richmond'
 		},
 		{
+			question: 'What is the capital of Washington?',
+			possibleAnswers: ['A. Olympia', 'B. Salem', 'C. Austin'],
+			marks: [true, false, false],
+			answer: 'Olympia'
+		},
+		{
 			question: 'What is the capital of West Virginia?',
 			possibleAnswers: ['A. Little Rock', 'B. Charleston', 'C. Atlanta'],
 			marks: [false, true, false],
 			answer: 'Charleston'
+		},
+		{
+			question: 'What is the capital of Wisconsin?',
+			possibleAnswers: ['A. Salt Lake City', 'B. Salem', 'C. Madison'],
+			marks: [false, false, true],
+			answer: 'Madison'
+		},
+		{
+			question: 'What is the capital of Wyoming?',
+			possibleAnswers: ['A. Little Rock', 'B. Cheyenne', 'C. Austin'],
+			marks: [false, true, false],
+			answer: 'Cheyenne'
 		}
 	]
 	var index = 0
@@ -258,6 +324,7 @@ $('document').ready(function() {
 			$('.time').text(time)
 			if (time === 0) {
 				alert('GAME OVER.  ' + 'You score: ' + score + ' correct!')
+				score = 0
 				$('.time').fadeOut('fast')
 				$('.question').hide()
 				$('#buttonA').hide()
@@ -343,6 +410,7 @@ $('document').ready(function() {
 			// console.log('correct!')
 		} else {
 			correctAnswer = false
+			// score--
 			// console.log('Incorrect!')
 		}
 	}
