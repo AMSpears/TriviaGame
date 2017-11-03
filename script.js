@@ -17,12 +17,14 @@ $('document').ready(function() {
 		$('.time').show()
 		$('.time').text(time)
 		// Timer found on: https://stackoverflow.com/questions/3785029/jquery-countdown-timer
+		// Good sourcing where you found information
 		var counter = setInterval(function() {
 			time--
 			$('.time').text(time)
-			if (time === 0) {
+			if (time === 0) { // Abstract some of this logic to an endGame function
 				alert('GAME OVER.  ' + 'You score: ' + score + ' correct!')
-				score = 0
+				// Instead of having an alert - try targetting the element with class 'score' and putting the results of variable score there.
+				score = 0 // Put the score = 0 assignment in the beginGame function
 				$('.time').fadeOut('fast')
 				$('.question').hide()
 				$('#buttonA').hide()
@@ -38,6 +40,7 @@ $('document').ready(function() {
 	function nextQuestion() {
 		// // index++
 		// if (index >= questionArr.length) alert('Game Over!')
+		// No commented out code in Production Branch!
 		displayQuestion(index)
 	}
 
@@ -87,31 +90,29 @@ $('document').ready(function() {
 			answerSelected = 'C.'
 		}
 
-		// console.log(answerSelected)
-		// console.log(questionArr[index - 1])
-		// console.log(correctAnswer, score)
-		var correctAnswer = true
 		if (answerSelected === 'A.' && questionArr[index - 1].marks[0] === true) {
-			score++ // console.log(score)
-			// console.log('correct!')
-		} else if (
-			answerSelected === 'B.' &&
-			questionArr[index - 1].marks[1] === true
-		) {
-			score++ // console.log(score)
-			// console.log('correct!')
-		} else if (
-			answerSelected === 'C.' &&
-			questionArr[index - 1].marks[2] === true
-		) {
-			score++ // console.log(score)
-			// console.log('correct!')
-		} else {
-			correctAnswer = false
-			// score--
-			// console.log('Incorrect!')
-		}
+			score++
+		} else if (answerSelected === 'B.' && questionArr[index - 1].marks[1] === true) {
+			score++
+		} else if (answerSelected === 'C.' && questionArr[index - 1].marks[2] === true) {
+			score++
+		} // You can clean up this section a bit.  Put the conditionals on one line, and get rid of the unneeded 'correctAnswer' variable.
+		// You could even combine this if/else code block with the one directly above to be more efficient like this ...
+		//`if (element.id === 'buttonA') {
+		//	`questionArr[index - 1].marks[0] === true) {
+		// score++ }
+		// }
 	}
 
 	beginGame()
 })
+
+
+// Nice job with the JS.  Function names are semantic and code is generally pretty clear.
+// You did a nice job targetting elements in the DOM and your approach to functional programming is pretty strong.
+// Couple small things that you could improve upon.
+// - Take out all commented / testing code
+// - Have it so when a user clicks an answer after they cycle through all the questions, there are no errors logged in the console - or just hide the answers.
+// - Have it so when a user cycles through all the answers before the timer runs out, they don't have to wait for the timer to run down to see their score.
+// - Present the results of the game in the browser instead of having an alert.
+// - Maybe an option for less questions?

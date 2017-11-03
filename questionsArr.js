@@ -300,3 +300,4 @@ var questionArr = [
 		answer: 'Cheyenne'
 	}
 ]
+// Good job seperating your questions into a seperate file.  

@@ -16,10 +16,12 @@ Before developing the game, I researched other trivia games online to get a user
 ## Installation Instructions
 
 Fork and clone the repository to render all the files.
-
+<!-- You should mention what I should do once I clone it down.  Do I need to open anything? -->
 ## Future Implementations
 
  - Display the questions that were correct and incorrect while the user is playing.
  - Display the score on the page rather than using the alert.
  - Creating other Levels to the game.
  - Create other Trivia topics for the User to choose.
+
+<!-- Good job on the README!  Consider adding in a 'Features/User' stories section as well.  Go ahead and put where you got the map from in the README as well. -->

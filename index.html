@@ -10,23 +10,26 @@
   </head>
   <body>
 <!-- img source http://fixtheprimaries.com/solutions/rotatingregional/ -->
-  <img class="center fit"src="US_states_img.jpg" alt="US-Map" >
-  <h1> U.S. State Capitals</h1>
- <div class="container">
- <div class="time"></div>
- <div class="score"></div>
- <div class="question"></div>
- <div class="answers"></div>
- <div>
-   <button class="answerSelected" id="buttonA">A.</button>
- </div>
- <div>
-   <button class="answerSelected" id="buttonB">B.</button>
- </div>
- <div>
-   <button class="answerSelected" id="buttonC">C.</button>
- </div>
-</div>
-
+    <img class="center fit" src="US_states_img.jpg" alt="US-Map" >
+    <h1> U.S. State Capitals</h1>
+    <div class="container">
+      <!-- Maybe question-container or question-box would be more clear --->
+      <div class="time"></div>
+      <div class="score"></div>
+      <div class="question"></div>
+      <div class="answers"></div>
+      <div>
+        <button class="answerSelected" id="buttonA">A.</button>
+        <!-- HTML / CSS by convention keeps classes / ids as lower-case-spine-case -->
+        <!-- answerSelected => answer_selected-->
+      </div>
+      <div>
+        <button class="answerSelected" id="buttonB">B.</button>
+      </div>
+      <div>
+        <button class="answerSelected" id="buttonC">C.</button>
+      </div>
+    </div>
+<!-- Watch the way things are tabbed over in the body. Everything that is nested within the body should be to the right of its parent element. -->
   </body>
 </html>
