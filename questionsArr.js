@@ -66,7 +66,7 @@ var questionArr = [
 		answer: 'Augusta'
 	},
 	{
-		question: 'What is the capital of Missipi?',
+		question: 'What is the capital of Mississippi?',
 		possibleAnswers: ['A.Jackson', 'B. Lincoln', 'C. Cancord'],
 		marks: [true, false, false],
 		answer: 'Jackson'
@@ -174,7 +174,7 @@ var questionArr = [
 		answer: 'Lansing'
 	},
 	{
-		question: 'What is the capital of Minessota?',
+		question: 'What is the capital of Minnesota?',
 		possibleAnswers: ['A. Saint Paul', 'B. Helena', 'C. Consord'],
 		marks: [true, false, false],
 		answer: 'Saint Paul'
@@ -198,7 +198,7 @@ var questionArr = [
 		answer: 'Raleigh'
 	},
 	{
-		question: 'What is the capital of North Dokota?',
+		question: 'What is the capital of North Dakota?',
 		possibleAnswers: ['A. Oklahoma City', 'B. Raleigh', 'C. Bismarck'],
 		marks: [false, false, true],
 		answer: 'Bismarck'
@@ -222,7 +222,7 @@ var questionArr = [
 		answer: 'Salem'
 	},
 	{
-		question: 'What is the capital of Pennylvania?',
+		question: 'What is the capital of Pennsylvania?',
 		possibleAnswers: ['A. Harrisburg', 'B. Atlanta', 'C. Salem'],
 		marks: [true, false, false],
 		answer: 'Harrisburg'
@@ -246,7 +246,7 @@ var questionArr = [
 		answer: 'Pierre'
 	},
 	{
-		question: 'What is the capital of Tenessee?',
+		question: 'What is the capital of Tennessee?',
 		possibleAnswers: ['A. Nashville', 'B. Pierre', 'C. Salem'],
 		marks: [false, false, true],
 		answer: 'Nashville'

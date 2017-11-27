@@ -13,7 +13,7 @@ $('document').ready(function() {
 		}
 	}
 	function startTimer() {
-		var time = 40
+		var time = 50
 		$('.time').show()
 		$('.time').text(time)
 		// Timer found on: https://stackoverflow.com/questions/3785029/jquery-countdown-timer
