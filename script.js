@@ -3,26 +3,29 @@ $('document').ready(function() {
 	var score = 0
 	var index = 0
 	//shuffle found on: https://stackoverflow.com/questions/11935175/sampling-a-random-subset-from-an-array
+
 	function shuffle(array) {
 		for (let i = 0; i < array.length - 1; i++) {
 			var j = i + Math.floor(Math.random() * (array.length - i))
-
 			var shuffledArray = array[j]
 			array[j] = array[i]
 			array[i] = shuffledArray
 		}
 	}
+
 	function startTimer() {
 		var time = 50
 		$('.time').show()
 		$('.time').text(time)
+
 		// Timer found on: https://stackoverflow.com/questions/3785029/jquery-countdown-timer
+
 		var counter = setInterval(function() {
 			time--
 			$('.time').text(time)
 			if (time === 0) {
 				alert('GAME OVER.  ' + 'You score: ' + score + ' correct!')
-				score = 0
+				// score = 0
 				$('.time').fadeOut('fast')
 				$('.question').hide()
 				$('#buttonA').hide()
@@ -36,13 +39,12 @@ $('document').ready(function() {
 
 	$('.answerSelected').on('click', nextQuestion)
 	function nextQuestion() {
-		// // index++
-		// if (index >= questionArr.length) alert('Game Over!')
 		displayQuestion(index)
 	}
 
 	function beginGame() {
 		index = 0
+		score = 0
 		if ($('#startButton').length > 0) {
 			$('#startButton').show()
 		} else {
@@ -76,7 +78,7 @@ $('document').ready(function() {
 		nextQuestion()
 		displayQuestion(index)
 	})
-	// Come back to the code below and simply it into two functions.
+	// Come back to the code below and simplify it into two functions.
 	function correctAnswer(element, score) {
 		var answerSelected
 		if (element.id === 'buttonA') {
@@ -87,29 +89,21 @@ $('document').ready(function() {
 			answerSelected = 'C.'
 		}
 
-		// console.log(answerSelected)
-		// console.log(questionArr[index - 1])
-		// console.log(correctAnswer, score)
 		var correctAnswer = true
 		if (answerSelected === 'A.' && questionArr[index - 1].marks[0] === true) {
-			score++ // console.log(score)
-			// console.log('correct!')
+			score++
 		} else if (
 			answerSelected === 'B.' &&
 			questionArr[index - 1].marks[1] === true
 		) {
-			score++ // console.log(score)
-			// console.log('correct!')
+			score++
 		} else if (
 			answerSelected === 'C.' &&
 			questionArr[index - 1].marks[2] === true
 		) {
-			score++ // console.log(score)
-			// console.log('correct!')
+			score++
 		} else {
 			correctAnswer = false
-			// score--
-			// console.log('Incorrect!')
 		}
 	}
 

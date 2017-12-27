@@ -17,6 +17,10 @@ Before developing the game, I researched other trivia games online to get a user
 
 Fork and clone the repository to render all the files.
 
+## Acknowledgements
+
+Map(logo) obtained from http://fixtheprimaries.com/solutions/rotatingregional/
+
 ## Future Implementations
 
  - Display the questions that were correct and incorrect while the user is playing.
