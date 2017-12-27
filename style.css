@@ -13,7 +13,7 @@
 .fit {
 	max-width: 100%;
 	max-height: 100%;
-}
+} /* You shouldn't need both fit and center, since they are targetting the same element */
 .center {
 	display: block;
 	margin: auto;
@@ -27,8 +27,8 @@ button {
 	font-size: 16px;
 	padding: 20px;
 	width: 200px;
-	transition: all 0.5s;
-	cursor: pointer;
+	/*transition: all 0.5s;*/ /* Dont think this is doing anything at the moment */
+	cursor: pointer; /*nice job changing the cursor!*/
 	margin: 5px;
 }
 #startButton {
@@ -44,12 +44,13 @@ button {
 }
 #buttonC {
 	background-color: #7fba5e;
-}
-.time {
+}/* Good color choices! */
+/*.time {
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: column;
-}
+} */
+/* Don't think this `time` class is doing anything at the moment, can be removed */
 .question {
 	font-family: monospace;
 	font-size: 20px;
@@ -61,3 +62,10 @@ h1 {
 	text-align: center;
 	font-size: 40px;
 }
+
+/*CSS is pretty solid and semantically clear for the most part.*/
+/*I'd recommend reordering the selectors above from least specific to most specific
+- General element selectors first
+- Then all class selectors
+- Then all id selectors*/
+/*For athetics, I would recommend changing the timer font as well.  */
