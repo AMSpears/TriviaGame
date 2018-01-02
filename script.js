@@ -14,7 +14,7 @@ $('document').ready(function() {
 	}
 
 	function startTimer() {
-		var time = 50
+		var time = 5
 		$('.time').show()
 		$('.time').text(time)
 
@@ -25,7 +25,7 @@ $('document').ready(function() {
 			$('.time').text(time)
 			if (time === 0) {
 				alert('GAME OVER.  ' + 'You score: ' + score + ' correct!')
-				// score = 0
+
 				$('.time').fadeOut('fast')
 				$('.question').hide()
 				$('#buttonA').hide()
@@ -45,6 +45,7 @@ $('document').ready(function() {
 	function beginGame() {
 		index = 0
 		score = 0
+
 		if ($('#startButton').length > 0) {
 			$('#startButton').show()
 		} else {
@@ -58,6 +59,7 @@ $('document').ready(function() {
 			})
 		}
 	}
+
 	function displayQuestion(questionIndex) {
 		$('.question').html(questionArr[questionIndex].question)
 		$('#buttonA')
@@ -73,13 +75,13 @@ $('document').ready(function() {
 
 	$('.answerSelected').on('click', function() {
 		index++
-		score++
 		correctAnswer(this)
 		nextQuestion()
 		displayQuestion(index)
 	})
+
 	// Come back to the code below and simplify it into two functions.
-	function correctAnswer(element, score) {
+	function correctAnswer(element) {
 		var answerSelected
 		if (element.id === 'buttonA') {
 			answerSelected = 'A.'
