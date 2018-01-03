@@ -21,7 +21,7 @@ $('document').ready(function() {
 	}
 
 	function startTimer() {
-		var time = 5
+		var time = 50
 		$('.time').show()
 		$('.time').text(time)
 
