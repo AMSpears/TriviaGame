@@ -2,6 +2,9 @@ $('document').ready(function() {
 	$('.answerSelected').hide()
 	var score = 0
 	var index = 0
+
+	$('.correct-mark').hide()
+	$('.incorrect-mark').hide()
 	//shuffle found on: https://stackoverflow.com/questions/11935175/sampling-a-random-subset-from-an-array
 
 	function shuffle(array) {
@@ -94,18 +97,34 @@ $('document').ready(function() {
 		var correctAnswer = true
 		if (answerSelected === 'A.' && questionArr[index - 1].marks[0] === true) {
 			score++
+			$('.correct-mark')
+				.show()
+				.delay(200)
+				.fadeOut()
 		} else if (
 			answerSelected === 'B.' &&
 			questionArr[index - 1].marks[1] === true
 		) {
 			score++
+			$('.correct-mark')
+				.show()
+				.delay(200)
+				.fadeOut()
 		} else if (
 			answerSelected === 'C.' &&
 			questionArr[index - 1].marks[2] === true
 		) {
 			score++
+			$('.correct-mark')
+				.show()
+				.delay(200)
+				.fadeOut()
 		} else {
 			correctAnswer = false
+			$('.incorrect-mark')
+				.show()
+				.delay(200)
+				.fadeOut()
 		}
 	}
 

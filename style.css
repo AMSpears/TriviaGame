@@ -28,6 +28,14 @@ h1 {
 	font-family: monospace;
 	font-size: 20px;
 }
+.correct-mark {
+	color: green;
+	font-size: 30px;
+}
+.incorrect-mark {
+	color: red;
+	font-size: 30px;
+}
 button {
 	border-radius: 4px;
 	border: none;
