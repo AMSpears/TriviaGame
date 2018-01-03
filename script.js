@@ -3,8 +3,12 @@ $('document').ready(function() {
 	var score = 0
 	var index = 0
 
+	$('.score').hide()
+	// check-mark implementation source = https://stackoverflow.com/questions/3428766/jquery-show-for-5-seconds-then-hide
+
 	$('.correct-mark').hide()
 	$('.incorrect-mark').hide()
+
 	//shuffle found on: https://stackoverflow.com/questions/11935175/sampling-a-random-subset-from-an-array
 
 	function shuffle(array) {
@@ -17,7 +21,7 @@ $('document').ready(function() {
 	}
 
 	function startTimer() {
-		var time = 50
+		var time = 5
 		$('.time').show()
 		$('.time').text(time)
 
@@ -27,9 +31,12 @@ $('document').ready(function() {
 			time--
 			$('.time').text(time)
 			if (time === 0) {
-				alert('GAME OVER.  ' + 'You score: ' + score + ' correct!')
+				$('.score')
+					.show()
+					.text('You score: ' + score + '/50')
+					.delay(500)
 
-				$('.time').fadeOut('fast')
+				$('.time').fadeOut(500)
 				$('.question').hide()
 				$('#buttonA').hide()
 				$('#buttonB').hide()
@@ -55,6 +62,7 @@ $('document').ready(function() {
 			$('.container').append('<button id="startButton">Start</button>')
 			$('#startButton').on('click', function() {
 				$(this).hide()
+				$('.score').hide()
 				$('.question').show()
 				startTimer(index)
 				shuffle(questionArr)
@@ -83,7 +91,6 @@ $('document').ready(function() {
 		displayQuestion(index)
 	})
 
-	// Come back to the code below and simplify it into two functions.
 	function correctAnswer(element) {
 		var answerSelected
 		if (element.id === 'buttonA') {
