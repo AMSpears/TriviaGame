@@ -36,7 +36,7 @@ $('document').ready(function() {
 					.text('You score: ' + score + '/50')
 					.delay(500)
 
-				$('.time').fadeOut(500)
+				$('.time').fadeOut('fast')
 				$('.question').hide()
 				$('#buttonA').hide()
 				$('#buttonB').hide()

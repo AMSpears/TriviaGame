@@ -35,11 +35,11 @@ h1 {
 	font-weight: bold;
 }
 .correct-mark {
-	color: green;
+	color: #15af17;
 	font-size: 30px;
 }
 .incorrect-mark {
-	color: red;
+	color: #ef1a1a;
 	font-size: 30px;
 }
 button {
