@@ -7,7 +7,7 @@ h1 {
 }
 .container {
 	width: 60%;
-	height: 300px;
+	height: inherit;
 	border: 1px solid #cccccc;
 	margin: auto;
 	border-radius: 7px;
